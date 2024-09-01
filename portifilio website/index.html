@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="data:image/png;base64,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"
+    />
+    <title>amanullah mangal</title>
+  </head>
+  <body>
+    <!-- the first section including the photo and navbar  -->
+
+    <section class="section section-1">
+      <!-- start of header  -->
+      <header class="header">
+        <div class="header-text-container">
+          <p class="header-text">
+            Porti<span class="header-text-span">filio</span>
+          </p>
+        </div>
+        <div class="header-socialmedia">
+          <img
+            class="header-imges"
+            src="data:image/png;base64,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"
+            alt=""
+          />
+          <img
+            class="header-imges"
+            src="data:image/png;base64,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"
+            alt=""
+          />
+          <img
+            class="header-imges"
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBEQACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAABwQFBgEDAv/EAEMQAAEDAwICBgQKBgsAAAAAAAECAwQABREGEiExE0FRYXGBByKRoRQmMlNydLGzwdEzQlKCk+EWFyMkJTZUYnOy0v/EABoBAAMBAQEBAAAAAAAAAAAAAAAEBgUDAgH/xAA0EQABAwIDBAgGAgMBAAAAAAAAAQIDBBEFITESQWHREzRRcYGxwfAVIjJSkaEz8SMk4RT/2gAMAwEAAhEDEQA/AHjQAUARp06NAYL8t5DTY61HmewDrNe44nyu2WJdTlLNHC3bkWyGPueuXFFSLZHCU/OvcSfBP5+ytiHCU1lXwTmYVRjarlC3xXkZ2Te7nKP9vPfI7Eq2D2DArRZSQM+lqe+8ypKypk+p6+XlYhKcUs5WpSj2k5phGomguqquqno1NkskFmS83j9hwj7K8Oijd9TUXwPbZZGfS5U8VLeDq26xSOkeTJR+y8OPtHH7aTlw2B+iWXgPQ4rUx6rtJx5/2a2zarg3Ipac/u0g8Ahw8FHuV1+41kVGHyw5pmhuUuKQz/Kvyu4+imgzmkTSCgAoAKAKnUN8YssXe567y+DTQPFR/Ad9NUtK+odZNN6ilZWMpmXXXcnvcLG43KVcpJfmOFa/1RySkdgHVVNDAyFuyxCRnnknftyLf07iJurscbBuoCwbqAsG6gLBuoCwbqAsa3S2rVxVoh3Rwrjngh5XEt+PaPs8OWRW4cjkWSJM+ztNugxNY1SOZcu3s7+AwUkKAIOQeRrAKQ7QBGuM1m3wnpchWG2k7j2nsA7yeFdIonSvRjdVOc0rYmK92iCgulxfuk5yXJPrrPBOeCE9QFVsEDYY0Y0jKiZ88iyP3kXNdjiGaADNAWLnT+npd7WVNkNRkHC3lDPHsA6zSVXWx06WXNewdpKCSpW6ZN7TaRdE2dpADyHpCusrdKfcnFYz8UqHLkqJ4czcjwimanzIq+PI9l6NsShwiKSe0Pr/ABNeUxKq+79JyPa4VSfb+15mF1ZbY9ou/wAGib+jLSV+urJySfyrboJ3zxbb9bmDiFOynm2GaWKbNOiJutA30r/wqUvKkpJjqJ5gc0+XMd2eysHFKTZ/zM8eZQYTWXToH+HI3FYxui/9JVzJej21tXqpHSu46zySPtPmK3cIgyWVe5PUwMZnurYU719DEbq2zCDdQAbqAPSM0uTIaYa+W6tKE+JOK8vcjGq5dx7YxXuRqbx1W+GzAhsxY6cNtJ2jv7/E1GSSOker3aqWsUTYmIxuiEgnFeDoVzuoLO0socucUKScEdKOFMNpJ3JdGL+Bdaunatlen5F3rqbGm3wPQ30PN9AlO5ByM5PCqDDY3xwbL0st19CcxSRkk+0xbpZPUz26tAzj0jSXIshuQwra60oLQe8V4exr2q12intj3Mcj26oOq3zET4LEtr5DyAsDsz1VGysWJ6sXcWsUiSxo9N4ntRyvhl+nvE8C8pI8E+qPcBVbRx9HTsbw88ySrH9JUPdx8siuzTIsGaADNAFppYBWo7aD8+k0rW5U7+4boUvUs7xz1IFeUWuH3I+mJq2lFKiEoyOxSgD7iadw5iPqWovuyCWIuVtM5U95ihzVYSQZoAM0AGaAGR6P7o0iwdC+sAsvLSnj1HCvtUancUgVajabvRORR4VMn/n2V3KvP1Fo44XHFrVzUok+ZqiRLJYn3LdVU+d1fT4G6gC0tVhul3YW/b43StoXsUekSnjgHrPeKWnrIYHbMi2UZho5p27UaZF7p7St7h3yFJkw9jLboUtXSoOB5GkarEKeSFzGuzVOxR6koKiOZr3JknEZ9ThQlLrGDJuOnpMWG30j6ygpTuAzhYJ4nuFN0MrIqhr3rln5CldE6WBWM1y8xc/0M1D/AKAfxkfnVB8Tpfu/SmB8Mqvt/ZTz4r9vluRJaNj7eAtO4HGQDzHcacikbKxHs0UUkidE9WO1Qj7q9ngN1AEyHcHorakNk4Kt3u/lXKSFr1up3imdGlkI9xbMe4SmCMFp5aMeCiK9Qu242u7UTyPkzNmRycVI+a6HKwZoCwz/AEV8bHK+tq/6Iqbxn+dvd6qUWEfwL3+iG1rINUKACgDhHCgBG6jk/Cb/AHF7OQZKwD3A4HuAqzpGbEDG8EJCrdtzvXiV2aYF7BmgLGs0lYjdLc6+E5CXijP7qT+NZddVdDIjeBq0NN0karxInpDgGDqV5wJw3KSHknHXyUPaM+ddMLl6SmRN7cuR4xKLYnVdy5mZ3VomfYN1AWL6watuFhiuRoTcVTbjhcJdQonOAOpQ7BSVTQRVL0e9Vyyy/odpq2SnbstRDRWDXl2uN5hw32oQaedCFFDagcd3rUhU4XBFC57VW6d3IepsRlllaxUSy++0ZNT5tFPq26P2awyJ8VLanWygAOAlPFQB5EdtNUUDZ50jdot/IXqpXQwq9uqC/wD6yb38xb/4S/8A3W58Gp+1fynIxvi0/Yn75mPUsqUVKOVKOSa1kSyWQzFzW5zdQfLBuoAdWh4CrdpqG24nDriS8sY5FXEDyGB5VH4hN0tQ5U0TL8FVQxdFA1F11IvpCsZu9mLsdG6VEy42BzUn9ZPs4+IFdcMqugms7R2R4r6fporpqgmt1VhMhuoAN1AFzo1Xxptn/OKUrurP7hui6w3vHrUaVJmfSR/k+b9Jr7xNaGF9bb4+SiWIdWd4eYl91VpMBuoAN1AF9ouyqvl6baWnMVnDkg9W0ck+Z4eGeykcQqUp4VVNVyT3wHKKn6aVL6JqO8AAcqkCoO0AKn0h6SXBecu1tbKojh3PtpH6JXWr6J93hypMLr0eiQyLnu4/9MOvotlVlZpvMHmtoybBmgLF1ow/Gq1/WBSlf1Z/cNUSf7DR8VGFQZf0lcNGzfpNfeJrRwrrbfHyUTxDq7vDzErmq0mbBmgLEq2QJV1nNw4LRcecPAdQHaT1AVzmmZCxXvXI6RQuldstHhpewsaftiIrJ3uq9Z53HFavy7BUdV1TqmTbXTchTU1O2BmyhcUsMBQBxSQpJSoAg8CD10ALfVno63qXL0/tSo8VRFHA/cPV4Hh39VbtFi9k2J/zzMmqw5F+aL8C3lx5EN9TEtlxl5Hym3ElJFUDHte3aat0Md8bmLZyWLXRR+Ndr+sClq/qz+4Yov52j8qLKYy3pM4aLnfSa+8TWjhXW2+PkonX9Xd73iR3VXE2aDTukrrflJWy10EU85LwITj/AGjmry4d4pGqxCGnSyrdexPeQ3BRSzZ6J2jf03pyBp6KWoaCp1f6V9fy3D+A7qmKqrkqXXfpuQ3oKdkDbNLilTuFABQAUAFAEK5WuBdGuiuERmQgcukTkjwPMeVdIppIV2o3WPD42PSzkuZpOh7PbLvBnwfhLS0PAhrpNyPeCffWh8SnlidG+y5CiUcUciPabKsseKnVFuZu1oXAkKcQ08tAUpsgKGFA8Mg9lM0kzoZUkbql/I5TxpIxWrvINq0RYLYUuNwg+6OTkk9IfYeA8hXWfEqmXJXWThkco6OGPRPyaMAAADlSI0doAKACgD//2Q=="
+            alt="facebook icon"
+          />
+          <img
+            class="header-imges"
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
+        </div>
+      </header>
+      <!-- the end of header  -->
+      <div class="container-fluid">
+        <div class="row ">
+          <!-- the left side the menu part -->
+          <div class="col-5  col-sm-5 col-md-3 col-lg-2 menubar">
+            <div class="sidebar-picandtext">
+              <!-- the rounded photo and the name part  -->
+              <div class="sidebar-info">
+                <h2 class="sidebar-info-text">Amanullah Mangal</h2>
+              </div>
+              <div class="sidebar-info-img">
+                <img src="imges/profile.JPG" alt="profile picture " />
+              </div>
+            </div>
+            <!-- the menu item and the img part  -->
+            <div class="sidebar-menu">
+              <!-- first item  -->
+              <div class="sidebar-item-container">
+                <div class="sidebar-item-container-img">
+                  <svg
+                    class="menu-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                    />
+                  </svg>
+                </div>
+                <div class="sidebar-item-container-item">
+                  <p class="menu-item menu-item-1">HOME</p>
+                </div>
+              </div>
+              <!-- second item  -->
+              <div class="sidebar-item-container">
+                <div class="sidebar-item-container-img">
+                  <svg
+                    class="menu-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"
+                    />
+                  </svg>
+                </div>
+                <div class="sidebar-item-container-item">
+                  <p class="menu-item menu-item-2">ABOUT</p>
+                </div>
+              </div>
+              <!-- thered item  -->
+              <div class="sidebar-item-container">
+                <div class="sidebar-item-container-img">
+                  <svg
+                    class="menu-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                    />
+                  </svg>
+                </div>
+                <div class="sidebar-item-container-item">
+                  <p class="menu-item menu-item-3">CONTACT</p>
+                </div>
+              </div>
+              <!-- end of the items -->
+            </div>
+          </div>
+          <!-- the end of first col 4 or the end of the menu bar or navbar part  -->
+
+          <!-- the start of second col or the part of introdution and icons of front end  -->
+          <div class="col-6 col-sm-6 col-md-5  sidebar-introduciton">
+            <!-- the div of name and all the text  -->
+            <div class="sidebar-introducito-text">
+              <p class="sidebar-introducito-text-p">
+                Hi,</span>I am
+                <span class="sidebar-introduciton-1st-span"
+                  >Amanullah Mangal</span
+                >
+                a front end developer.
+              </p>
+             
+            </div>
+            <!-- the div of front end icons  -->
+            <div class="sidebar-introducito-images">
+                <img class ="sidebar-introducito-images-logo" src="imges/th.png" alt="html icon">
+                <img class ="sidebar-introducito-images-logo" src="imges/css.png" alt="css icon">
+                <img class ="sidebar-introducito-images-logo" src="imges/js.png" alt="JAVASCRIPT icon">
+                <img class ="sidebar-introducito-images-logo" src="imges/bootstrap.png" alt="bootstrap icon">
+                <img class ="sidebar-introducito-images-logo" src="imges/react.png" alt="reacticon">
+            </div>
+
+          </div>
+          <div class=" a col-sm-12  col-lg-4 backgound-img-container ">
+                  <img src="imges/a profile photo_.png" alt="amanmangal photo"class="background-img ">
+          </div>
+
+         
+        </div>
+      </div>
+    </section>
+
+    <!-- start of the section two  -->
+    <section class="section section-2">
+
+    
+    <div class="container info-container">
+
+   <div class="container-info-heading">
+     <p class="container-info-heading-p">Welcome to my profile! here you will find insights  my  </br>background, skills and experiences.</p>
+   </div>
+         
+   <div class="row container-info-cards-aa justify-content-center">
+      <div class="col-8 container-info-cards container-info-cards-1 col-sm-12  col-md-6 col-lg-3">
+          <div class="container-info-cards-heading">
+                <p>front end skill.</p>
+          </div>
+          <div class="container-info-cards-text ">
+              <p>Currently I hold certificates in front-end development from two institution (Faham  and Ulearna ) where I acquired
+                specialized skills in HTML, CSS, JAVASCRIPT, BOOTSTRAP, REACT.JS .I focused on advanced front-end frameworks and responsive design principles.
+              </p>
+          </div>
+      </div>
+      <!-- second div of the info part info section  -->
+      <div class="col-8 container-info-cards container-info-cards-2 col-sm-12  col-md-6 col-lg-3">
+        <div class="container-info-cards-heading">
+              <p>Language Skills.</p>
+        </div>
+        <div class="container-info-cards-text">
+            <p> I am proficient in  English,  pashto  and Dari .currently I hold an (international Lado Meli) English  language  diploma.
+              strong language skills enhance my ability to collaborate effectively in multicultural teams and understand diverse perspectives.
+            </p>
+        </div>
+    </div>
+   <!-- start of the theid info part container  -->
+   <div class="col-8 container-info-cards container-info-cards-3  col-sm-12 col-md-6 col-lg-3">
+    <div class="container-info-cards-heading">
+          <p>Projects.</p>
+    </div>
+    <div class="container-info-cards-text">
+        <p> I have a diverse portfolio in front-end development, including creating <span class="container-info-cards-text-span">Bankist websites</span> , designing custom <span class="container-info-cards-text-span">landing pages</span>
+           and  <span class="container-info-cards-text-span">designing cards</span>, and developing numerous websites. each project showcases my skills in HTML, CSS, JAVASCRIPT, BOOTSTRAP.
+        </p>
+    </div>
+</div>
+
+
+
+</div>
+   </div> 
+   <!-- start of the seocnd part of info section. -->
+    <div class="container info-2">
+        <div class="row">
+          <!-- the second info part text start  -->
+             <div class="col-12 col-lg-5 col-md-12 info-2-text">
+                  <p>In this section you can find out more about me!
+             </div>
+
+             <!-- the second info part cards part  -->
+             <div class="col-12 col-lg-7 col-md-12 ">
+                      <div class="row info-2-cards">
+                          <div class="col-6 col-sm-5  col-lg-3 info-2-cards-childs">
+                            <!-- the img div of the first row -->
+                             <div>
+                              <svg  class="info-2-cards-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304l0 128c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-223.1L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6l29.7 0c33.7 0 64.9 17.7 82.3 46.6l58.3 97c9.1 15.1 4.2 34.8-10.9 43.9s-34.8 4.2-43.9-10.9L232 256.9 232 480c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-128-16 0z"/></svg>
+                             </div>
+                             <!-- the big content second div of the first row  -->
+                                  <div class="info-2-cards-text">
+                                              <p>seventen</p>
+                                  </div>
+
+                                  <!-- the thired  part of the div  -->
+                                   <div class="info-2-cards-title">
+                                             <p>AGE</p>
+                                   </div>
+                          </div> 
+                          <!-- the second info second part second div  -->
+                          <div class="col-6 col-sm-5  col-lg-3 info-2-cards-childs">
+                            <!-- the img div of the first row -->
+                             <div>
+                              <svg class="info-2-cards-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5l0 39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9l0 39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7l0-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+                             </div>
+                             <!-- the big content second div of the first row  -->
+                                  <div class="info-2-cards-text">
+                                              <p class="info-afghanistan">Afghanistan</p>
+                                  </div>
+
+                                  <!-- the thired  part of the div  -->
+                                   <div class="info-2-cards-title">
+                                             <p>country</p>
+                                   </div>
+                          </div>
+                         
+
+                      </div> 
+
+                      <div class="row info-2-cards">
+                        <div class="col-6 col-sm-2 col-sm-5 col-lg-3  info-2-cards-childs">
+                          <!-- the img div of the first row -->
+                           <div>
+                            <svg class="info-2-cards-img"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M337.8 5.4C327-1.8 313-1.8 302.2 5.4L166.3 96 48 96C21.5 96 0 117.5 0 144L0 464c0 26.5 21.5 48 48 48l208 0 0-96c0-35.3 28.7-64 64-64s64 28.7 64 64l0 96 208 0c26.5 0 48-21.5 48-48l0-320c0-26.5-21.5-48-48-48L473.7 96 337.8 5.4zM96 192l32 0c8.8 0 16 7.2 16 16l0 64c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-64c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 64c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-64zM96 320l32 0c8.8 0 16 7.2 16 16l0 64c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-64c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 64c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-64zM232 176a88 88 0 1 1 176 0 88 88 0 1 1 -176 0zm88-48c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-16 0 0-16c0-8.8-7.2-16-16-16z"/></svg>
+                           </div>
+                           <!-- the big content second div of the first row  -->
+                                <div class="info-2-cards-text">
+                                            <p>School</p>
+                                </div>
+
+                                <!-- the thired  part of the div  -->
+                                 <div class="info-2-cards-title">
+                                           <p>Education</p>
+                                 </div>
+                        </div> 
+                        <!-- the second info second part second div  -->
+                        <div class="col-6 col-sm-5  col-lg-3 info-2-cards-childs">
+                          <!-- the img div of the first row -->
+                           <div>
+                            <svg class="info-2-cards-img"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 256C0 114.6 114.6 0 256 0c33 0 64.6 6.3 93.6 17.7c7.4 2.9 11.5 10.7 9.8 18.4s-8.8 13-16.7 12.4c-4.8-.3-9.7-.5-14.6-.5c-114.9 0-208 93.1-208 208s93.1 208 208 208c4.9 0 9.8-.2 14.6-.5c7.9-.5 15 4.7 16.7 12.4s-2.4 15.5-9.8 18.4C320.6 505.7 289 512 256 512C114.6 512 0 397.4 0 256zM375.4 137.4c3.5-7.1 13.7-7.1 17.2 0l31.5 63.8c1.4 2.8 4.1 4.8 7.2 5.3l70.4 10.2c7.9 1.1 11 10.8 5.3 16.4l-50.9 49.6c-2.3 2.2-3.3 5.4-2.8 8.5l12 70.1c1.3 7.8-6.9 13.8-13.9 10.1l-63-33.1c-2.8-1.5-6.1-1.5-8.9 0l-63 33.1c-7 3.7-15.3-2.3-13.9-10.1l12-70.1c.5-3.1-.5-6.3-2.8-8.5L261 233.1c-5.7-5.6-2.6-15.2 5.3-16.4l70.4-10.2c3.1-.5 5.8-2.4 7.2-5.3l31.5-63.8z"/></svg>
+                           </div>
+                           <!-- the big content second div of the first row  -->
+                                <div class="info-2-cards-text">
+                                            <p>Islam</p>
+                                </div>
+
+                                <!-- the thired  part of the div  -->
+                                 <div class="info-2-cards-title">
+                                           <p>Religion</p>
+                                 </div>
+                        </div>
+                       
+
+                    </div> 
+             </div>
+        </div>
+    </div>
+    
+    </section>
+
+    <!-- starting the seond there named contact centre  -->
+
+
+    <section class="section section-3">
+
+
+      <div class="section-3-heading">
+          <p>welcome to the contact sectoin.</p>
+      </div>
+      <div class="container contact-container">
+
+     
+          <div class="row">
+              <div class="col-12 col-md-8 col-lg-6 contact-firstdiv">
+                <div class="contact-heading">
+                  <p>
+                    Contact me 
+                  </p>
+                </div>
+                  
+            
+                <div class="form-info">
+                  <form>
+                    <div class="mb-3">
+
+                      <div id="emailHelp" class="form-text">your information will be save trust me .</div>
+                       <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp">
+                     
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control form-control-lg" id="exampleInputPassword1">
+                    </div>
+
+                    <label for="exampleFormControlTextarea1" class="form-label">your feedback</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> </br>
+                    <div class="form-check">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          female
+                        </label>
+                      </div>
+                    </div><br>
+                    <button type="submit" class="btn btn-info btn-lg">Submit</button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-12 col-lg-6  contact-seconddiv ">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="contact-seconddiv-1 ">
+                      <!-- the facebook part -->
+                                    <div class="contact-seconddiv-childs">
+                                       
+                                 
+                                        <div class="contact-seconddiv-childs-img-container">
+                                           <img src="imges/facebook.png" alt="facebook" class="socilmedia-contect">
+                                        </div>
+                                        <div class="contact-seconddiv-childs-text-container">
+                                          <p>Aman mangal</p>    
+                                     </div>
+                                    </div>
+                                    
+                                  <!-- the email part -->
+                                    <div class="contact-seconddiv-childs">
+                                       
+
+                                      <div class="contact-seconddiv-childs-img-container">
+                                         <img src="imges/gmail.png" alt="email" class="socilmedia-contect">
+                                      </div>
+                                      <div class="contact-seconddiv-childs-text-container">
+                                        <p>amanmangal982@gmail.com</p>    
+                                   </div>
+                                  </div>
+                               <!-- the instagram part -->
+                               <div class="contact-seconddiv-childs">
+                                       
+
+                                <div class="contact-seconddiv-childs-img-container">
+                                   <img src="imges/instragram.png" alt="instagram" class="socilmedia-contect">
+                                </div>
+                                <div class="contact-seconddiv-childs-text-container">
+                                  <p>amanmangal2023</p>    
+                             </div>
+                            </div>
+
+                            <!-- the linked in part  -->
+
+                            <div class="contact-seconddiv-childs">
+                                       
+
+                              <div class="contact-seconddiv-childs-img-container">
+                                 <img src="imges/linked in.png" alt="linked in " class="socilmedia-contect">
+                              </div>
+                              <div class="contact-seconddiv-childs-text-container">
+                                <p>Aman mangal</p>    
+                           </div>
+                          </div>
+                          <!-- whatsapp part  -->
+                          <div class="contact-seconddiv-childs whatsapp">
+                                       
+
+                            <div class="contact-seconddiv-childs-img-container">
+                               <img src="imges/watsapp.png" alt="whatsapp" class="socilmedia-contect">
+                            </div>
+                            <div class="contact-seconddiv-childs-text-container">
+                              <p>+93 77 12 84 690</p>    
+                         </div>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+                       
+              </div>
+          </div>
+        </div>
+    </section>
+                <!-- starting of the footer section  -->
+  <section class="section section-4">
+    <!-- header of the footer  -->
+         <div class="footer-heading">
+               <p>Amanullah Mangal</p>
+         </div>
+
+           <div class="footer-socialmedia">
+            <div class=" footer-main">
+              <!-- the facebook part -->
+                            <div class="contact-seconddiv-childs">
+                               
+                         
+                                <div class="contact-seconddiv-childs-img-container">
+                                   <img src="imges/facebook.png" alt="facebook" class="socilmedia-contect">
+                                </div>
+                                <div class="contact-seconddiv-childs-text-container">
+                                  <p>Aman mangal</p>    
+                             </div>
+                            </div>
+                            
+                          <!-- the email part -->
+                            <div class="contact-seconddiv-childs">
+                               
+
+                              <div class="contact-seconddiv-childs-img-container">
+                                 <img src="imges/gmail.png" alt="email" class="socilmedia-contect">
+                              </div>
+                              <div class="contact-seconddiv-childs-text-container">
+                                <p>amanmangal982@gmail.com</p>    
+                           </div>
+                          </div>
+                       <!-- the instagram part -->
+                       <div class="contact-seconddiv-childs">
+                               
+
+                        <div class="contact-seconddiv-childs-img-container">
+                           <img src="imges/instragram.png" alt="instagram" class="socilmedia-contect">
+                        </div>
+                        <div class="contact-seconddiv-childs-text-container">
+                          <p>amanmangal2023</p>    
+                     </div>
+                    </div>
+
+                    <!-- the linked in part  -->
+
+                    <div class="contact-seconddiv-childs">
+                               
+
+                      <div class="contact-seconddiv-childs-img-container">
+                         <img src="imges/linked in.png" alt="linked in " class="socilmedia-contect">
+                      </div>
+                      <div class="contact-seconddiv-childs-text-container">
+                        <p>Aman mangal</p>    
+                   </div>
+                  </div>
+                  <!-- whatsapp part  -->
+                  <div class="contact-seconddiv-childs whatsapp">
+                               
+
+                    <div class="contact-seconddiv-childs-img-container">
+                       <img src="imges/watsapp.png" alt="whatsapp" class="socilmedia-contect">
+                    </div>
+                    <div class="contact-seconddiv-childs-text-container">
+                      <p>+93 77 12 84 690</p>    
+                 </div>
+                </div>
+             </div>
+           </div>
+
+           <div class="footer-end">
+             <p>
+              &copy; Copyright  all right reserved Amanullah Mangal 2024. 
+              </p>
+           </div>
+  </section>
+
+  </body>
+   <script>
+    
+    const btn3 = document.querySelector('.menu-item-3')
+    const btn2 = document.querySelector('.menu-item-2');
+    const section2 = document.querySelector('.section-2')
+    const section3 = document.querySelector('.section-3')
+
+    btn2.addEventListener('click',function(){
+      const sectionTwoCords = section2.getBoundingClientRect()
+      console.log(sectionTwoCords)
+      window.scrollTo(sectionTwoCords)
+    })
+
+    btn3.addEventListener('click',function(){
+      sectionThreeCords = section3.getBoundingClientRect()
+
+      window.scrollTo(sectionThreeCords)
+    })
+   </script>
+  </html> 
+
+
+<div>
+
+</div>
